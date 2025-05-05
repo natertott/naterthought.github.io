@@ -2,7 +2,7 @@
 date = '2025-05-05T13:40:07-07:00'
 draft = false
 title = 'About'
-menu = "main
+menu = "main"
 ---
 
 I'm Nathan Johnson, a materials scientist studying advanced manufacturing and automated laboratories.
