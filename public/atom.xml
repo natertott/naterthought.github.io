@@ -2,16 +2,35 @@
   <channel>
     
     <title>Nathan Johnson</title>
-    <description>Really angry with Linus Torvalds for inventing git</description>
+    <description>#1 git hater</description>
     <link>http://localhost:1313/</link>
     
     <language>en</language>
     <copyright>Copyright 2025, Calvin Tran</copyright>
-    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 05 May 2025 14:42:43 -0700</lastBuildDate>
     <generator>Hugo - gohugo.io</generator>
     <docs>http://cyber.harvard.edu/rss/rss.html</docs>
     <atom:link href="http://localhost:1313//atom.xml" rel="self" type="application/atom+xml"/>
     
+    
+    <item>
+      <title>Hello World</title>
+      <link>http://localhost:1313/posts/2025-05-06-first-post/</link>
+      <description>&lt;p&gt;Nothing much to say quite yet. Here is a photo of my cat:&lt;/p&gt;
+&lt;p&gt;&lt;img
+  src=&#34;KC.jpg&#34;
+  alt=&#34;alt&#34;
+  loading=&#34;lazy&#34;
+  decoding=&#34;async&#34;
+  class=&#34;full-width&#34;
+/&gt;
+
+&lt;/p&gt;
+</description>
+      <author>Nathan Johnson</author>
+      <guid>http://localhost:1313/posts/2025-05-06-first-post/</guid>
+      <pubDate>Mon, 05 May 2025 14:42:43 -0700</pubDate>
+    </item>
     
   </channel>
 </rss>

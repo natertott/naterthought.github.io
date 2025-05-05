@@ -3,7 +3,7 @@
   "title": "Nathan Johnson",
   "home_page_url": "http://localhost:1313/",
   "feed_url": "http://localhost:1313/feed.json",
-  "description": "Really angry with Linus Torvalds for inventing git",
+  "description": "#1 git hater",
   "favicon": "http://localhost:1313//assets/favicon.ico",
   "expired": false,
   "author": {
@@ -14,6 +14,21 @@
     
     
 
+    
+    {
+      "id": "0a4d55a8d778e5022fab701977c5d840bbc486d0",
+      "title": "Hello World",
+      "summary": "",
+      "content_text": "Nothing much to say quite yet. Here is a photo of my cat:\n",
+      "content_html": "\u003cp\u003eNothing much to say quite yet. Here is a photo of my cat:\u003c/p\u003e\n\u003cp\u003e\u003cimg\r\n  src=\"KC.jpg\"\r\n  alt=\"alt\"\r\n  loading=\"lazy\"\r\n  decoding=\"async\"\r\n  class=\"full-width\"\r\n/\u003e\r\n\r\n\u003c/p\u003e\n",
+      "url": "http://localhost:1313/posts/2025-05-06-first-post/",
+      "date_published": "5056-05-09T542:55:00-07:00",
+      "date_modified": "5056-05-09T542:55:00-07:00",
+      "author": {
+        "name": "Nathan Johnson",
+        "url": "http://localhost:1313/"
+      }
+    }
     
   ]
 }

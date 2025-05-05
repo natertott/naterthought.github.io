@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Materials on Nathan Johnson</title>
+    <link>http://localhost:1313/tags/materials/</link>
+    <description>Recent content in Materials on Nathan Johnson</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 05 May 2025 14:42:43 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/materials/atom.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World</title>
+      <link>http://localhost:1313/posts/2025-05-06-first-post/</link>
+      <pubDate>Mon, 05 May 2025 14:42:43 -0700</pubDate>
+      <guid>http://localhost:1313/posts/2025-05-06-first-post/</guid>
+      <description>&lt;p&gt;Nothing much to say quite yet. Here is a photo of my cat:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img&#xD;&#xA;  src=&#34;KC.jpg&#34;&#xD;&#xA;  alt=&#34;alt&#34;&#xD;&#xA;  loading=&#34;lazy&#34;&#xD;&#xA;  decoding=&#34;async&#34;&#xD;&#xA;  class=&#34;full-width&#34;&#xD;&#xA;/&gt;&#xD;&#xA;&#xD;&#xA;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
