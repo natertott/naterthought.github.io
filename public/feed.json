@@ -1,0 +1,19 @@
+{
+  "version": "https://jsonfeed.org/version/1",
+  "title": "Nathan Johnson",
+  "home_page_url": "http://localhost:1313/",
+  "feed_url": "http://localhost:1313/feed.json",
+  "description": "Really angry with Linus Torvalds for inventing git",
+  "favicon": "http://localhost:1313//assets/favicon.ico",
+  "expired": false,
+  "author": {
+    "name": "Nathan Johnson",
+    "url": "http://localhost:1313/"
+  },
+  "items": [
+    
+    
+
+    
+  ]
+}
