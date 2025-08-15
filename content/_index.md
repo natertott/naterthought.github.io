@@ -7,7 +7,11 @@ draft = false
 
 I'm Nathan Johnson, a materials scientist studying advanced manufacturing and automated laboratories.
 
-Below are some peer reviewed articles I've published about my research:
+Below are some articles I've published about my research:
+
+- <a href="/papers/VGPT.pdf" target="_blank" rel="noopener">
+  How I Taught an LLM to Operate a High End Microscope
+</a>
 
 - <a href="/papers/MLAM.pdf" target="_blank" rel="noopener">
   How Machine Learning can (and has) accelerate additive manufacturing development
