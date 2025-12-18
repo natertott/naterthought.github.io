@@ -22,5 +22,5 @@ Below are some articles I've published about my research:
 </a>
 
 - <a href="/papers/ALthinfilm.pdf" target="_blank" rel="noopener">
-  High entropy alloy synthesis guided by machine learning models
+  How High entropy alloy synthesis guided by machine learning models
 </a>
