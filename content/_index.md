@@ -9,8 +9,12 @@ I'm Nathan Johnson, a materials scientist studying advanced manufacturing and au
 
 Below are some articles I've published about my research:
 
+- <a href="/papers/GRC2026.pdf" target="_blank" rel="noopener">
+  2026 Gordon Research Conference: AI For Materials, Energy, and Chemical Sciences
+</a>
+
 - <a href="/papers/VGPT.pdf" target="_blank" rel="noopener">
-  How I taught a Large Language Model to operate a high end microscope
+  How I taught a Large Language Model to operate a high end microscope (OLD PROTOTYPE: NOW OUTDATED)
 </a>
 
 - <a href="/papers/MLAM.pdf" target="_blank" rel="noopener">
