@@ -13,10 +13,6 @@ Below are some articles I've published about my research:
   2026 Gordon Research Conference: AI For Materials, Energy, and Chemical Sciences
 </a>
 
-- <a href="/papers/VGPT.pdf" target="_blank" rel="noopener">
-  How I taught a Large Language Model to operate a high end microscope (OLD PROTOTYPE: NOW OUTDATED)
-</a>
-
 - <a href="/papers/MLAM.pdf" target="_blank" rel="noopener">
   How Machine Learning can (and has) accelerate additive manufacturing development
 </a>
