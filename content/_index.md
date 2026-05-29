@@ -9,6 +9,10 @@ I'm Nathan Johnson, a materials scientist studying advanced manufacturing and au
 
 Below are some articles I've published about my research:
 
+- <a href="/papers/NISTinsitu.pdf" target="_blank" rel="noopener>
+  Rapid In Situ X-ray Microscopy of Additively Manufactured Alloys using Deep Learning
+</a>
+
 - <a href="/papers/GRC2026.pdf" target="_blank" rel="noopener">
   2026 Gordon Research Conference: AI For Materials, Energy, and Chemical Sciences
 </a>
