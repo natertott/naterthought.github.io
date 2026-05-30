@@ -43,7 +43,7 @@ Originally, the development of basketball shoes focused purely on functionality;
 
 ![alt](figure3.webp)
 
-Figure 2. The evolution of function and aesthetics in the history of basketball shoes.1
+Figure 2. The evolution of function and aesthetics in the history of basketball shoes. [1]
 
 But now, basketball shoe culture has evolved for 30 years; the shoes themselves have evolved considerably with both the game of basketball and consumer tastes. Most importantly, the consumer base of the basketball shoe has grown tremendously to the point that a considerable portion of the population is concerned solely with wearing basketball shoes. Thus, what was previously a hybrid of a functional shoe and an aesthetic shoe has now become its own pure category of shoe. The process that plays out in Figure 3 shows our attempt to purify the hybrid. The basketball shoe is no longer subsumed under the category of ‘sports shoes’ or ‘fashion shoes’ but is now a category in its own right.
 
@@ -61,9 +61,9 @@ When contemplating your own death, there are many obvious conclusions to make. F
 
 Another option is to be confronted with your death and choose a guiding principle. Make things easier on yourself by sticking to a moral. Life is constantly throwing scenarios at you; it’s useful to have a framework that provides an answer for most scenarios. Religion and consumerism can fill this void. Perhaps you choose the life of an ascetic and wear only the cheapest, most barebones shoes possible. Perhaps you choose the life of the aesthetic and choose to decorate yourself lavishly with this one life, constantly keeping up with changing trends.
 
-There is a more cold and calculating way of approaching one’s own mortality. I encounter this modality in myself and often in the people I’ve grown close to. People who calculate how to spend a life. You have x amount of moments to live between now and your death, whenever it may be. Now take a second and consider how you would, in this current moment, like to spend those moments. Most likely you imagine them to be ‘happy’ instead of ‘sad.’ The willfully ignorant, the rejectionists, the dogmatist, at least the true among them; they are not thinking ahead in this way. They have a mantra and they stick to it, time after time. The religious do not think they way; they encounter every life scenario and take action based on their holy book of answers.
+There is a more cold and calculating way of approaching one’s own mortality. I encounter this modality in myself and often in the people I’ve grown close to. People who calculate how to spend a life. You have *x* amount of moments to live between now and your death, whenever it may be. Now take a second and consider how you would, in this current moment, like to spend those moments. Most likely you imagine them to be ‘happy’ instead of ‘sad.’ The willfully ignorant, the rejectionists, the dogmatist, at least the true among them; they are not thinking ahead in this way. They have a mantra and they stick to it, time after time. The religious do not think they way; they encounter every life scenario and take action based on their holy book of answers.
 
-But you are calculating.2 How many years until mental decline, or extensive physical depreciation? How much can I fit into that time? What if I do this for now and that for later? What about a backup plan, or a backup backup plan? You, who have now calculated the spread of your happiness over time, you face external realities. Forces that seek to diminish or work against your happiness. You must take this into account when calculating happiness over x. So how do you respond to those external forces? Maybe if you write in your journal or make a list of every good and bad thing that can possibly happen until you have calculated every answer before it is needed. At the same time a car might hit you any instant now, so maybe have a glass of liquor while writing that list. Enjoy this moment while calculating the next. Inevitably, you never enjoy the drink and you never finish the list.
+But you are calculating. [2] How many years until mental decline, or extensive physical depreciation? How much can I fit into that time? What if I do this for now and that for later? What about a backup plan, or a backup backup plan? You, who have now calculated the spread of your happiness over time, you face external realities. Forces that seek to diminish or work against your happiness. You must take this into account when calculating happiness over x. So how do you respond to those external forces? Maybe if you write in your journal or make a list of every good and bad thing that can possibly happen until you have calculated every answer before it is needed. At the same time a car might hit you any instant now, so maybe have a glass of liquor while writing that list. Enjoy this moment while calculating the next. Inevitably, you never enjoy the drink and you never finish the list.
 
 People in our modern Western society are calculating their happiness distributed over X amount of time and coming up with increasingly insane ways of solving that problem. One of those choices is to optimize. The Cole Haan Hybrid Dress Sneaker seeks to be the aesthetic of optimization. You must be a corporate drone and you better look good. Be successful and be attractive and be healthy and be optimal. In every moment, from now until your death, you must be all things at all times.
 
@@ -73,16 +73,10 @@ You cannot have a purely hybrid approach to your life: you are better off either
 
 The Cole Haan shoe fails because it tries to resolve a contradiction that cannot be resolved—and in doing so, it reveals something uncomfortable about the way we live.
 
-1
-A historical note: modern readers may associate the top two shoes (the Converse All-Star and the Nike Air Force 1) as being ‘fashionable’ shoes. Both of these shoes were originally developed for the game of basketball, often in conjunction with professional players. They have now been subsumed under the ‘fashionable.’ This process is probably better explained by Baudrillard than by Latour.
+*1
+A historical note: modern readers may associate the top two shoes (the Converse All-Star and the Nike Air Force 1) as being ‘fashionable’ shoes. Both of these shoes were originally developed for the game of basketball, often in conjunction with professional players. They have now been subsumed under the ‘fashionable.’ This process is probably better explained by Baudrillard than by Latour.*
 
 
-2
-Whether this mode of calculation has always existed in humans, or it is a mental derangement, or whether it is a facet of capitalism, neoliberalism, modernity etc…the author does not take a stance. He only acknowledges it as an empirical observation at best and anecdote at worst.
+*2
+Whether this mode of calculation has always existed in humans, or it is a mental derangement, or whether it is a facet of capitalism, neoliberalism, modernity etc…the author does not take a stance. He only acknowledges it as an empirical observation at best and anecdote at worst.*
 
-
-Subscribe to natertot
-Launched 4 months ago
-deeply unserious
-By subscribing, you agree Substack's Terms of Use, and acknowledge its Information Collection Notice and Privacy Policy.
-4 Likes
