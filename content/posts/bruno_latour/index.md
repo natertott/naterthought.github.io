@@ -1,11 +1,11 @@
 +++
-date = '2025-05-05T14:42:43-07:00'
+date = '2026-05-16T14:42:43-07:00'
 draft = false
 title = 'Cole Haan Shoe Review: What is the appropriate amount to contemplate your own death?'
 tags = ['opinion','materials']
 +++
 
-Bruno Latour, Nike Air Jordan 1, Being All Things at Once
+{{< big >}}**Bruno Latour, Nike Air Jordan 1, Being All Things at Once**{{< /big >}}
 
 
 *“We’re the highest form of life on earth and yet ineffably sad because we know what no other animal knows: that we must die.” — Don DeLillo*
@@ -22,7 +22,7 @@ Contemplating the self and mortality produces a kind of melancholy. The young re
 And yet I can think of another adult who is not contemplating their death, and it seems maybe they are not contemplating much at all, despite displaying all signs of being a highly functional person (especially by the standards of mainstream Western society). This is a person who constantly fills their mind with “productive” thoughts, which to them feels satisfying if not ecstatic. They do not want a thought to enter or exit their head with a hint of negativity. Ideally, no “bad” thought enters at all—not now, not ever.
 
 
-![alt](figure2.webp)
+![alt](figure2.jpg)
 
 Figure 1. Modernity.
 
