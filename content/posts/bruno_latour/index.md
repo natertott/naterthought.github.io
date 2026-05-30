@@ -1,8 +1,8 @@
 +++
 date = '2026-05-16T14:42:43-07:00'
 draft = false
-title = 'Cole Haan Shoe Review: What is the appropriate amount to contemplate your own death?'
-tags = ['opinion','materials']
+title = 'Cole Haan Shoe Review: How much to contemplate death?'
+tags = ['opinion','aesthetics']
 +++
 
 {{< big >}}**Bruno Latour, Nike Air Jordan 1, Being All Things at Once**{{< /big >}}
