@@ -5,7 +5,7 @@ title = 'Cole Haan Shoe Review: How much to contemplate death?'
 tags = ['opinion','aesthetics']
 +++
 
-{{< big >}}**Bruno Latour, Nike Air Jordan 1, Being All Things at Once**{{< /big >}}
+**Bruno Latour, Nike Air Jordan 1, Being All Things at Once**
 
 
 *“We’re the highest form of life on earth and yet ineffably sad because we know what no other animal knows: that we must die.” — Don DeLillo*
