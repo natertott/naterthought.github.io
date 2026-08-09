@@ -13,13 +13,6 @@ theme = 'maverick'
   [params.counter]
     enabled = true
 
-  # Comments are stored as GitHub issues on this repo via utteranc.es.
-  # Requires the utterances GitHub App installed on the repo (see README).
-  [params.comments]
-    enabled = true
-    githubRepo = 'natertott/naterthought.github.io'
-    theme = 'github-light'
-
 
 [menu]
   [[menu.main]]

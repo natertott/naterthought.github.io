@@ -58,10 +58,3 @@ overridden by the project-level `layouts/` and `assets/` directories, which
 take precedence. To change the design, edit the project files — leave the
 submodule alone.
 
-## Comments
-
-Post pages can show comments via [utterances](https://utteranc.es), which
-stores them as GitHub issues on this repo. For comment posting to work, the
-utterances GitHub App must be installed on this repository (one-time setup at
-https://github.com/apps/utterances). Toggle with `params.comments.enabled` in
-`hugo.toml`.

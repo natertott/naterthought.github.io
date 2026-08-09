@@ -9,22 +9,6 @@
   <main id="main">
     <div class="content">
       {{ .Content }}
-
-      {{ $posts := where .Site.RegularPages "Section" "posts" }}
-      {{ $recent := first 5 $posts }}
-      {{ if $recent }}
-      <h2>Recent writing</h2>
-      <ul class="post-list">
-        {{ range $recent }}
-        <li>
-          <a href="{{ .Permalink }}">{{ .Title }}</a>
-          <span class="leader" aria-hidden="true"></span>
-          <time datetime="{{ dateFormat "2006-01-02" .Date }}">{{ dateFormat "Jan 2006" .Date }}</time>
-        </li>
-        {{ end }}
-      </ul>
-      <p><a href="/posts/">all posts &rarr;</a></p>
-      {{ end }}
     </div>
   </main>
 

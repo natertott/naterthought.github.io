@@ -27,15 +27,6 @@
       {{ end }}
 
       {{ .Content }}
-
-      {{ if eq .Section "posts" }}
-      {{ if eq .Site.Params.comments.enabled true }}
-      <div class="comments" id="comments">
-        <h2>Comments</h2>
-        {{ partial "comments.html" $ }}
-      </div>
-      {{ end }}
-      {{ end }}
     </div>
   </main>
 
