@@ -1,0 +1,31 @@
+<footer class="site-footer">
+  <hr class="rule rule--footer">
+  <p>&copy; {{ dateFormat "2006" now }} {{ .Site.Params.author }} &middot; built with Hugo</p>
+  {{ if .Site.Params.counter.enabled }}
+  <div class="visitor-counter" hidden>
+    <span>visitor No.</span>
+    <span class="counter-digits" id="visit-count">------</span>
+  </div>
+  <script>
+    (function () {
+      // Real visit counter backed by Abacus (https://abacus.jasoncameron.dev),
+      // a free open-source counter API. Counts one visit per browser session;
+      // stays hidden if the service is unreachable. No cookies.
+      var box = document.querySelector('.visitor-counter');
+      var el = document.getElementById('visit-count');
+      if (!box || !el) return;
+      var base = 'https://abacus.jasoncameron.dev';
+      var path = '/naterthought.com/site-visits';
+      var counted = sessionStorage.getItem('nt-counted');
+      fetch(base + (counted ? '/get' : '/hit') + path)
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+        .then(function (d) {
+          sessionStorage.setItem('nt-counted', '1');
+          el.textContent = String(d.value).padStart(6, '0');
+          box.hidden = false;
+        })
+        .catch(function () { /* counter stays hidden */ });
+    })();
+  </script>
+  {{ end }}
+</footer>

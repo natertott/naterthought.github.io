@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  {{ partial "head.html" . }}
+<body>
+  <a class="skip-link" href="#main">Skip to main</a>
+
+  {{ partial "header.html" . }}
+
+  <main id="main">
+    <div class="content">
+      <h1>{{ .Title }}</h1>
+
+      {{ if eq .Section "posts" }}
+      <div class="post-meta">
+        <time datetime="{{ dateFormat "2006-01-02" .Date }}">{{ .Date.Format "January 2, 2006" }}</time>
+        {{ $taxonomy := "tags" }}
+        {{ with .Param $taxonomy }}
+        <ul class="tag-list">
+          {{ range $index, $tag := . }}
+            {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}
+            <li><a class="tag" href="{{ .Permalink }}">{{ $tag | urlize }}</a></li>
+            {{- end -}}
+          {{- end -}}
+        </ul>
+        {{ end }}
+      </div>
+      {{ end }}
+
+      {{ .Content }}
+    </div>
+  </main>
+
+  {{ partial "footer.html" . }}
+</body>
+</html>

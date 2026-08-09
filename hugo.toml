@@ -3,19 +3,15 @@ languageCode = 'en-us'
 title = 'Nathan Johnson'
 theme = 'maverick'
 
-[permalinks]
-  pages = "/:slug"
-
 [params]
   logo = '/assets/favicon.ico'
-  description = "#1 git hater"
+  description = "materials scientist, microscopist, occasional essayist"
   author = 'Nathan Johnson'
   items = 10
 
-  [params.comments]
+  # Real visitor counter (see layouts/partials/footer.html). Set to false to hide it.
+  [params.counter]
     enabled = true
-    githubRepo = 'canhtran/maverick'
-    theme = 'github-light'
 
 
 [menu]

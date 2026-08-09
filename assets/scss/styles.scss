@@ -1,0 +1,351 @@
+/* ===================================================================
+   naterthought.com — muted lo-fi pixel design
+   palette: moss #2E4A2B · bark #4A372B · slate #42414A
+            sage #8F9F8D · clay #C9A891
+   =================================================================== */
+
+/* self-hosted fonts (latin subsets, downloaded from Google Fonts) */
+@font-face {
+    font-family: "VT323";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/fonts/vt323-latin.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Press Start 2P";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/fonts/press-start-2p-latin.woff2") format("woff2");
+}
+
+:root {
+    --moss: #2E4A2B;
+    --bark: #4A372B;
+    --slate: #42414A;
+    --sage: #8F9F8D;
+    --clay: #C9A891;
+    --paper: #EFE9E0;
+    --panel: #E5DDD0;
+    --faint: #6F6E78;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+body {
+    font: 1.3rem/1.5 "VT323", "Courier New", monospace;
+    color: var(--slate);
+    background: var(--paper);
+    margin: 0;
+    padding: 0 1rem 3rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Press Start 2P", monospace;
+    color: var(--moss);
+    line-height: 1.6;
+    margin: 2rem 0 1rem;
+}
+
+h1 { font-size: 1rem; }
+h2 { font-size: 0.8rem; }
+h3, h4, h5, h6 { font-size: 0.7rem; }
+
+p, ul, ol, blockquote { margin: 0 0 1rem; }
+
+a { color: var(--moss); }
+a:visited { color: var(--bark); }
+a:hover { color: var(--bark); }
+
+.skip-link {
+    position: absolute;
+    top: -80px;
+    left: 0;
+    background: var(--moss);
+    color: var(--paper);
+    padding: 0.4rem 0.8rem;
+    z-index: 100;
+}
+
+.skip-link:focus { top: 0; }
+
+.content {
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+/* ---------- header ---------- */
+
+.site-header {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 2rem 0 0;
+}
+
+.site-header__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.5rem 1.5rem;
+}
+
+.brand {
+    font-family: "Press Start 2P", monospace;
+    font-size: 0.85rem;
+    color: var(--moss);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.brand:visited, .brand:hover { color: var(--moss); }
+
+.cursor {
+    display: inline-block;
+    width: 0.6em;
+    animation: blink 1.2s steps(1) infinite;
+    color: var(--sage);
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.site-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.site-nav a {
+    text-decoration: none;
+    color: var(--slate);
+    border-bottom: 2px dotted var(--sage);
+    padding-bottom: 1px;
+}
+
+.site-nav a:visited { color: var(--slate); }
+
+.site-nav a:hover {
+    color: var(--moss);
+    border-bottom-color: var(--moss);
+}
+
+.site-nav li.active a {
+    color: var(--moss);
+    border-bottom: 2px solid var(--moss);
+}
+
+.rule {
+    border: 0;
+    border-top: 2px dashed var(--sage);
+    margin: 1.25rem 0 2rem;
+}
+
+.rule--footer { margin: 2.5rem 0 1.25rem; }
+
+/* ---------- content elements ---------- */
+
+.tagline {
+    color: var(--faint);
+    margin-top: 0.25rem;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid var(--bark);
+    padding: 3px;
+    background: var(--paper);
+}
+
+blockquote {
+    border-left: 4px solid var(--sage);
+    padding-left: 1rem;
+    color: var(--faint);
+}
+
+code, pre {
+    font-family: "Courier New", monospace;
+    font-size: 0.85em;
+    background: var(--panel);
+}
+
+pre {
+    padding: 0.75rem;
+    overflow: auto;
+    border: 1px solid var(--sage);
+}
+
+code { padding: 0 0.25rem; }
+pre code { padding: 0; }
+
+main ul { list-style: none; padding-left: 1.4rem; }
+
+main ul > li::before {
+    content: "\25AA";
+    color: var(--moss);
+    display: inline-block;
+    width: 1.4rem;
+    margin-left: -1.4rem;
+}
+
+main ul.post-list > li::before,
+main ul.tag-list > li::before,
+main ul.paper-list > li::before {
+    content: none;
+    margin: 0;
+    width: auto;
+}
+
+main ol { padding-left: 1.6rem; }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+th, td {
+    border: 1px solid var(--sage);
+    text-align: left;
+    padding: 0.4rem 0.6rem;
+}
+
+th {
+    background: var(--panel);
+    color: var(--moss);
+}
+
+hr {
+    border: 0;
+    border-top: 2px dashed var(--sage);
+    margin: 2rem 0;
+}
+
+/* ---------- post list ---------- */
+
+.post-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+}
+
+.post-list li {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    padding: 0.35rem 0;
+}
+
+.post-list a {
+    text-decoration: none;
+}
+
+.post-list a:hover { text-decoration: underline; }
+
+.post-list .leader {
+    flex: 1;
+    border-bottom: 2px dotted var(--sage);
+    min-width: 1.5rem;
+}
+
+.post-list time {
+    color: var(--faint);
+    white-space: nowrap;
+}
+
+/* ---------- post meta ---------- */
+
+.post-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1rem;
+    color: var(--faint);
+    margin: -0.5rem 0 1.5rem;
+}
+
+.tag-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    padding: 0;
+    margin: 0;
+}
+
+.tag {
+    text-decoration: none;
+    font-size: 0.95rem;
+    color: var(--bark);
+    background: var(--clay);
+    border: 1px solid var(--bark);
+    padding: 0 0.45rem;
+}
+
+.tag:visited { color: var(--bark); }
+.tag:hover { background: var(--paper); }
+
+/* ---------- papers ---------- */
+
+.paper-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+}
+
+.paper-list li {
+    border-left: 4px solid var(--sage);
+    padding: 0.15rem 0 0.15rem 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.paper-list .paper-desc {
+    color: var(--faint);
+    display: block;
+}
+
+/* ---------- footer ---------- */
+
+.site-footer {
+    max-width: 40rem;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--faint);
+}
+
+.site-footer p { margin: 0.4rem 0; }
+
+.visitor-counter[hidden] { display: none; }
+
+.visitor-counter {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin-top: 0.5rem;
+}
+
+.counter-digits {
+    font-family: "Press Start 2P", monospace;
+    font-size: 0.7rem;
+    color: var(--sage);
+    background: var(--slate);
+    border: 1px solid var(--sage);
+    padding: 0.35rem 0.5rem;
+    letter-spacing: 3px;
+}
