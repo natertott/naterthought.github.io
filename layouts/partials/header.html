@@ -1,38 +1,16 @@
-{{ $menuLength := len .Site.Menus.main }}
-<div class="marquee">
-  <div class="marquee__track">{{ .Site.Params.marquee | default "★ WELCOME TO MY WEBSITE ★ THANKS FOR STOPPING BY ★ BEST VIEWED AT 800x600 ★ SIGN THE GUESTBOOK ★" }}</div>
-</div>
-
 <header class="site-header">
-  <a class="brand" href="{{ .Site.BaseURL }}">
-    {{ .Site.Title }}<span class="animate-blink">_</span>
-  </a>
-  <p class="tagline">{{ .Site.Params.description }}</p>
-
-  {{ if le $menuLength 1 }}
-  <ul class="nav-buttons">
-    {{ $currentPage := . }}
-    {{ range .Site.Menus.main }}
-    <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
-      <a class="nav-btn" href="{{ .URL }}">{{ .Name }}</a>
-    </li>
-    {{ end }}
-  </ul>
-  {{ else }}
-  <button class="burger" aria-label="Toggle menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-  <nav class="nav-menu">
-    <ul class="nav-buttons">
-      {{ $currentPage := . }}
-      {{ range $index, $element := .Site.Menus.main }}
+  <div class="site-header__row">
+    <a class="brand" href="{{ .Site.BaseURL }}">{{ .Site.Title }}<span class="cursor" aria-hidden="true">&#9646;</span></a>
+    <nav class="site-nav">
+      <ul>
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
         <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
-          <a class="nav-btn" href="{{ .URL }}"{{ if .Params.external }} target="_blank" rel="noopener"{{ end }}>{{ .Name }}</a>
+          <a href="{{ .URL }}"{{ if .Params.external }} target="_blank" rel="noopener"{{ end }}>{{ .Name }}</a>
         </li>
-      {{ end }}
-    </ul>
-  </nav>
-  {{ end }}
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
+  <hr class="rule">
 </header>

@@ -1,30 +1,31 @@
-{{ $igURL := "" }}
-{{ range .Site.Menus.main }}{{ if eq .Identifier "instagram" }}{{ $igURL = .URL }}{{ end }}{{ end }}
-
-<div class="visitor-counter">
-  <div class="counter-digits">0 0 3 7 4 1</div>
-  <small>you are (probably) visitor #3741 &middot; counter is purely decorative, no cookies harmed</small>
-</div>
-
-<ul class="badge-row">
-  {{ range .Site.Menus.main }}
-    {{ $id := .Identifier }}
-    <li>
-      <a class="badge-88 badge-88--{{ if eq $id "about" }}about{{ else if eq $id "posts" }}blog{{ else if eq $id "instagram" }}insta{{ else if eq $id "linkedin" }}li{{ else if eq $id "scholar" }}gs{{ end }}"
-         href="{{ .URL }}"{{ if .Params.external }} target="_blank" rel="noopener"{{ end }}>{{ .Name }}</a>
-    </li>
-  {{ end }}
-  {{ if $igURL }}
-  <li>
-    <a class="badge-88 badge-88--guest" href="{{ $igURL }}" target="_blank" rel="noopener">Sign my<br>Guestbook</a>
-  </li>
-  {{ end }}
-</ul>
-
 <footer class="site-footer">
-  <p>&copy; {{ dateFormat "2006" now }} {{ .Site.Params.author }} &middot; built with Hugo, hosted on GitHub Pages</p>
-  <div class="best-viewed">
-    <p>BEST VIEWED IN ANY BROWSER<br>AT ANY RESOLUTION*</p>
+  <hr class="rule rule--footer">
+  <p>&copy; {{ dateFormat "2006" now }} {{ .Site.Params.author }} &middot; built with Hugo</p>
+  {{ if .Site.Params.counter.enabled }}
+  <div class="visitor-counter" hidden>
+    <span>visitor No.</span>
+    <span class="counter-digits" id="visit-count">------</span>
   </div>
-  <p style="font-size: .75rem; margin-top: .35rem; opacity: .7;">*unlike its 1999 counterpart, this claim is actually true</p>
+  <script>
+    (function () {
+      // Real visit counter backed by Abacus (https://abacus.jasoncameron.dev),
+      // a free open-source counter API. Counts one visit per browser session;
+      // stays hidden if the service is unreachable. No cookies.
+      var box = document.querySelector('.visitor-counter');
+      var el = document.getElementById('visit-count');
+      if (!box || !el) return;
+      var base = 'https://abacus.jasoncameron.dev';
+      var path = '/naterthought.com/site-visits';
+      var counted = sessionStorage.getItem('nt-counted');
+      fetch(base + (counted ? '/get' : '/hit') + path)
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+        .then(function (d) {
+          sessionStorage.setItem('nt-counted', '1');
+          el.textContent = String(d.value).padStart(6, '0');
+          box.hidden = false;
+        })
+        .catch(function () { /* counter stays hidden */ });
+    })();
+  </script>
+  {{ end }}
 </footer>

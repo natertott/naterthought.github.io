@@ -1,0 +1,8 @@
+# Hugo build output — GitHub Actions builds the site fresh on every push,
+# so generated files never belong in the repo.
+/public/
+/resources/_gen/
+.hugo_build.lock
+
+# macOS
+.DS_Store

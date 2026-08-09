@@ -8,44 +8,31 @@
 
   <main id="main">
     <div class="content">
-      <div class="window">
-        <div class="window__titlebar">
-          <span>{{ .Title | truncate 28 }}</span>
-          <span class="window__dots"><span></span><span></span><span></span></span>
-        </div>
-        <div class="window__body">
-          <h1>{{ .Title }}</h1>
+      <h1>{{ .Title }}</h1>
 
-          {{ if eq .Section "posts" }}
-          <div class="post-date">
-            <span class="time">{{ .Date.Format "January 2, 2006" }}</span>
-            {{ $taxonomy := "tags" }}
-            {{ with .Param $taxonomy }}
-            <ul class="tag-pixel-list" style="display:inline-flex;vertical-align:middle;margin-left:.5rem;">
-              {{ range $index, $tag := . }}
-                {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}
-                <li><a class="tag-pixel" href="{{ .Permalink }}">{{ $tag | urlize }}</a></li>
-                {{- end -}}
-              {{- end -}}
-            </ul>
-            {{ end }}
-          </div>
-          {{ end }}
-
-          {{ .Content }}
-        </div>
+      {{ if eq .Section "posts" }}
+      <div class="post-meta">
+        <time datetime="{{ dateFormat "2006-01-02" .Date }}">{{ .Date.Format "January 2, 2006" }}</time>
+        {{ $taxonomy := "tags" }}
+        {{ with .Param $taxonomy }}
+        <ul class="tag-list">
+          {{ range $index, $tag := . }}
+            {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}
+            <li><a class="tag" href="{{ .Permalink }}">{{ $tag | urlize }}</a></li>
+            {{- end -}}
+          {{- end -}}
+        </ul>
+        {{ end }}
       </div>
+      {{ end }}
+
+      {{ .Content }}
 
       {{ if eq .Section "posts" }}
       {{ if eq .Site.Params.comments.enabled true }}
-      <div class="window">
-        <div class="window__titlebar">
-          <span>GUESTBOOK.EXE</span>
-          <span class="window__dots"><span></span><span></span><span></span></span>
-        </div>
-        <div class="window__body" id="comments">
-          {{ partial "comments.html" $ }}
-        </div>
+      <div class="comments" id="comments">
+        <h2>Comments</h2>
+        {{ partial "comments.html" $ }}
       </div>
       {{ end }}
       {{ end }}

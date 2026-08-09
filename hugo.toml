@@ -3,19 +3,21 @@ languageCode = 'en-us'
 title = 'Nathan Johnson'
 theme = 'maverick'
 
-[permalinks]
-  pages = "/:slug"
-
 [params]
   logo = '/assets/favicon.ico'
-  description = "#1 git hater"
+  description = "materials scientist, microscopist, occasional essayist"
   author = 'Nathan Johnson'
   items = 10
-  marquee = "★ WELCOME TO NATE'S CORNER OF THE INTERNET ★ THANKS FOR STOPPING BY ★ BEST VIEWED AT 800x600 ★ UNDER CONSTRUCTION SINCE FOREVER ★ SIGN THE GUESTBOOK ★"
 
+  # Real visitor counter (see layouts/partials/footer.html). Set to false to hide it.
+  [params.counter]
+    enabled = true
+
+  # Comments are stored as GitHub issues on this repo via utteranc.es.
+  # Requires the utterances GitHub App installed on the repo (see README).
   [params.comments]
     enabled = true
-    githubRepo = 'canhtran/maverick'
+    githubRepo = 'natertott/naterthought.github.io'
     theme = 'github-light'
 
 

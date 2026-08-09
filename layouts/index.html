@@ -8,67 +8,23 @@
 
   <main id="main">
     <div class="content">
-
-      <div class="under-construction">
-        <span>&#128679; THIS SITE IS PERPETUALLY UNDER CONSTRUCTION &#128679;</span>
-      </div>
-
-      <div class="window">
-        <div class="window__titlebar">
-          <span>C:\NATE\WELCOME.TXT</span>
-          <span class="window__dots"><span></span><span></span><span></span></span>
-        </div>
-        <div class="window__body">
-          {{ .Content }}
-
-          {{ $igURL := "" }}
-          {{ range .Site.Menus.main }}{{ if eq .Identifier "instagram" }}{{ $igURL = .URL }}{{ end }}{{ end }}
-          <ul class="desktop-grid">
-            <li>
-              <a class="desktop-icon" href="/about/">
-                <span class="desktop-icon__glyph">&#129502;</span>
-                <span class="desktop-icon__label">About Me</span>
-              </a>
-            </li>
-            <li>
-              <a class="desktop-icon" href="/posts/">
-                <span class="desktop-icon__glyph">&#128220;</span>
-                <span class="desktop-icon__label">The Blog</span>
-              </a>
-            </li>
-            {{ if $igURL }}
-            <li>
-              <a class="desktop-icon" href="{{ $igURL }}" target="_blank" rel="noopener">
-                <span class="desktop-icon__glyph">&#128172;</span>
-                <span class="desktop-icon__label">Say Hi</span>
-              </a>
-            </li>
-            {{ end }}
-          </ul>
-        </div>
-      </div>
+      {{ .Content }}
 
       {{ $posts := where .Site.RegularPages "Section" "posts" }}
-      {{ $recent := first 3 $posts }}
+      {{ $recent := first 5 $posts }}
       {{ if $recent }}
-      <div class="window">
-        <div class="window__titlebar">
-          <span>LATEST_DISPATCHES.LOG</span>
-          <span class="window__dots"><span></span><span></span><span></span></span>
-        </div>
-        <div class="window__body">
-          <ul class="post-list">
-            {{ range $recent }}
-            <li>
-              <a href="{{ .Permalink }}">{{ .Title }}</a>
-              <time datetime="{{ dateFormat "2006-01-02" .Date }}">{{ dateFormat "Jan 2, 2006" .Date }}</time>
-            </li>
-            {{ end }}
-          </ul>
-        </div>
-      </div>
+      <h2>Recent writing</h2>
+      <ul class="post-list">
+        {{ range $recent }}
+        <li>
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+          <span class="leader" aria-hidden="true"></span>
+          <time datetime="{{ dateFormat "2006-01-02" .Date }}">{{ dateFormat "Jan 2006" .Date }}</time>
+        </li>
+        {{ end }}
+      </ul>
+      <p><a href="/posts/">all posts &rarr;</a></p>
       {{ end }}
-
     </div>
   </main>
 

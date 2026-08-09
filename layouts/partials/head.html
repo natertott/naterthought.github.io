@@ -1,138 +1,17 @@
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="{{ .Site.Params.author }} - {{ .Site.BaseURL }}">
+    <meta name="author" content="{{ .Site.Params.author }}">
     <title>{{ if eq .IsHome true }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
     <meta name="description" content="{{ if ne .Description "" }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
     {{ template "_internal/opengraph.html" . }}
     {{ template "_internal/schema.html" . }}
-    {{ template "_internal/google_analytics.html" . }}
     <link rel="canonical" href="{{ .Permalink }}">
-    <link rel="icon" href="{{ .Site.BaseURL }}/assets/favicon.ico">
-    <link rel="dns-prefetch" href="https://www.google-analytics.com">
-    <link href="https://www.google-analytics.com" rel="preconnect" crossorigin>
-    <link rel="alternate" type="application/atom+xml" title="{{ .Site.Title }}" href="{{ .Site.BaseURL }}/atom.xml" />
-    <link rel="alternate" type="application/json" title="{{ .Site.Title }}" href="{{ .Site.BaseURL }}/feed.json" />
-    <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap">
+    <link rel="icon" href="{{ "assets/favicon.ico" | absURL }}">
+    <link rel="alternate" type="application/atom+xml" title="{{ .Site.Title }}" href="{{ "atom.xml" | absURL }}" />
+    <link rel="alternate" type="application/json" title="{{ .Site.Title }}" href="{{ "feed.json" | absURL }}" />
+    <link rel="preload" href="/fonts/vt323-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/press-start-2p-latin.woff2" as="font" type="font/woff2" crossorigin>
     {{ $styles := resources.Get "scss/styles.scss" | toCSS (dict "outputStyle" "compressed") | minify }}
     <style>{{ $styles.Content | safeCSS }}</style>
-
-    {{ if .IsHome -}}
-    <script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "WebSite",
-        "name": "{{ .Site.Title }}",
-        "url": "{{ .Site.BaseURL }}",
-        "description": "{{ .Site.Params.description }}",
-        "thumbnailUrl": "{{ .Site.Params.Logo | absURL }}",
-        "license": "{{ .Site.Params.Copyright }}"
-    }
-    </script>
-    {{ else if .IsPage }}
-    {{ $author :=  or (.Params.author) (.Site.Params.author) }}
-    {{ $org_name :=  .Site.Title }}
-    <script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "BlogPosting",
-        "articleSection": "{{ .Section }}",
-        "name": "{{ .Title | safeJS }}",
-        "headline": "{{ .Title | safeJS }}",
-        "alternativeHeadline": "{{ .Params.lead }}",
-        "description": "{{ if .Description }}{{ .Description | safeJS }}{{ else }}{{if .IsPage}}{{ .Summary  }}{{ end }}{{ end }}",
-        "inLanguage": {{ .Site.LanguageCode | default "en-us" }},
-        "isFamilyFriendly": "true",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "{{ .Permalink }}"
-        },
-        "author" : {
-            "@type": "Person",
-            "name": "{{ $author }}"
-        },
-        "creator" : {
-            "@type": "Person",
-            "name": "{{ $author }}"
-        },
-        "accountablePerson" : {
-            "@type": "Person",
-            "name": "{{ $author }}"
-        },
-        "copyrightHolder" : "{{ $org_name }}",
-        "copyrightYear" : "{{ .Date.Format "2006" }}",
-        "dateCreated": "{{ .Date.Format "2006-01-02T15:04:05.00Z" | safeHTML }}",
-        "datePublished": "{{ .PublishDate.Format "2006-01-02T15:04:05.00Z" | safeHTML }}",
-        "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05.00Z" | safeHTML }}",
-        "publisher":{
-            "@type":"Organization",
-            "name": {{ $org_name }},
-            "url": {{ .Site.BaseURL }},
-            "logo": {
-                "@type": "ImageObject",
-                "url": "{{ .Site.Params.logo | absURL }}",
-                "width":"32",
-                "height":"32"
-            }
-        },
-        "image": {{ if .Params.images }}[{{ range $i, $e := .Params.images }}{{ if $i }}, {{ end }}{{ $e | absURL }}{{ end }}]{{ else}}{{.Site.Params.logo | absURL }}{{ end }},
-        "url" : "{{ .Permalink }}",
-        "wordCount" : "{{ .WordCount }}",
-        "genre" : [ {{ range $index, $tag := .Params.tags }}{{ if $index }}, {{ end }}"{{ $tag }}" {{ end }}],
-        "keywords" : [ {{ range $index, $tag := .Params.tags }}{{ if $index }}, {{ end }}"{{ $tag }}" {{ end }}]
-    }
-    </script>
-    {{ end }}
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const burger = document.querySelector('.burger');
-            const nav = document.querySelector('.nav-menu');
-            const header = document.querySelector('.site-header');
-
-            if (burger) {
-                burger.addEventListener('click', () => {
-                    nav.classList.toggle('active');
-                    header.classList.toggle('menu-open');
-                });
-
-                document.addEventListener('click', (e) => {
-                    if (!header.contains(e.target) && nav.classList.contains('active')) {
-                        nav.classList.remove('active');
-                        header.classList.remove('menu-open');
-                    }
-                });
-            }
-
-            // tiny cursor-sparkle trail, homage to the 2000s -- off for touch
-            // devices and anyone who asked their OS for less motion.
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            const isFinePointer = window.matchMedia('(pointer: fine)').matches;
-            if (!prefersReducedMotion && isFinePointer) {
-                const glyphs = ['★', '✦', '✯'];
-                let lastSpawn = 0;
-                document.addEventListener('mousemove', (e) => {
-                    const now = Date.now();
-                    if (now - lastSpawn < 70) return;
-                    lastSpawn = now;
-                    const star = document.createElement('span');
-                    star.textContent = glyphs[Math.floor(Math.random() * glyphs.length)];
-                    star.setAttribute('aria-hidden', 'true');
-                    star.style.cssText = 'position:fixed;left:' + e.clientX + 'px;top:' + e.clientY +
-                        'px;pointer-events:none;z-index:9999;font-size:14px;color:' +
-                        ['#ff2fd0', '#22e2f5', '#fff338'][Math.floor(Math.random() * 3)] +
-                        ';animation:sparkle-fade .6s ease-out forwards;';
-                    document.body.appendChild(star);
-                    setTimeout(() => star.remove(), 650);
-                });
-                const style = document.createElement('style');
-                style.textContent = '@keyframes sparkle-fade{from{opacity:1;transform:translateY(0) scale(1)}to{opacity:0;transform:translateY(-16px) scale(0.4)}}';
-                document.head.appendChild(style);
-            }
-        });
-    </script>
-  </head>
+</head>
