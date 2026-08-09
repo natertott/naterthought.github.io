@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  {{ partial "head.html" . }}
+<body>
+  <a class="skip-link" href="#main">Skip to main</a>
+
+  {{ partial "header.html" . }}
+
+  <main id="main">
+    <div class="content">
+      <div class="window">
+        <div class="window__titlebar">
+          <span>{{ .Title | truncate 28 }}</span>
+          <span class="window__dots"><span></span><span></span><span></span></span>
+        </div>
+        <div class="window__body">
+          <h1>{{ .Title }}</h1>
+          {{ .Content }}
+          <ul reversed class="post-list">
+            {{ range .Pages }}
+            <li>
+              <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
+              <time datetime="{{ dateFormat "2006-01-02" .Date }}">{{ dateFormat "Jan 2, 2006" .Date }}</time>
+            </li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  {{ partial "footer.html" . }}
+</body>
+</html>

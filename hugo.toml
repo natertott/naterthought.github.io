@@ -11,6 +11,7 @@ theme = 'maverick'
   description = "#1 git hater"
   author = 'Nathan Johnson'
   items = 10
+  marquee = "★ WELCOME TO NATE'S CORNER OF THE INTERNET ★ THANKS FOR STOPPING BY ★ BEST VIEWED AT 800x600 ★ UNDER CONSTRUCTION SINCE FOREVER ★ SIGN THE GUESTBOOK ★"
 
   [params.comments]
     enabled = true

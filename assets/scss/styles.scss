@@ -1,0 +1,575 @@
+/* ===================================================================
+   naterthought.com — retro geocities/myspace-era redesign
+   =================================================================== */
+
+:root {
+    --void-1: #0a0021;
+    --void-2: #1a0836;
+    --void-3: #2b0a4d;
+    --neon-pink: #ff2fd0;
+    --neon-cyan: #22e2f5;
+    --neon-yellow: #fff338;
+    --neon-green: #39ff8f;
+    --paper: #fdf6e3;
+    --paper-2: #fff8e7;
+    --ink: #1c1224;
+    --ink-soft: #4a3a58;
+    --link: #d6006e;
+    --link-visited: #6a0dad;
+    --border-dark: #000;
+    --border-light: #fff;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+html {
+    scrollbar-color: var(--neon-pink) var(--void-2);
+}
+
+body {
+    font: 1.35rem/1.55 "VT323", "Courier New", monospace;
+    text-rendering: optimizeLegibility;
+    color: var(--ink);
+    margin: 0;
+    padding: 0 0 3rem;
+    background-color: var(--void-1);
+    background-image:
+        radial-gradient(2px 2px at 20px 30px, #fff, transparent),
+        radial-gradient(1.5px 1.5px at 90px 80px, #fff, transparent),
+        radial-gradient(1.5px 1.5px at 150px 20px, var(--neon-cyan), transparent),
+        radial-gradient(2px 2px at 200px 120px, #fff, transparent),
+        radial-gradient(1.5px 1.5px at 50px 160px, var(--neon-pink), transparent),
+        radial-gradient(1.5px 1.5px at 240px 60px, #fff, transparent),
+        linear-gradient(160deg, var(--void-1), var(--void-2) 45%, var(--void-3));
+    background-repeat: repeat, repeat, repeat, repeat, repeat, repeat, no-repeat;
+    background-size: 260px 220px, 260px 220px, 260px 220px, 260px 220px, 260px 220px, 260px 220px, 100% 100%;
+    background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+    body { background-attachment: scroll; }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Press Start 2P", monospace;
+    line-height: 1.5;
+    color: var(--ink);
+}
+
+h1 { font-size: 1.4rem; }
+h2 { font-size: 1.1rem; }
+h3, h4, h5, h6 { font-size: 0.9rem; }
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--neon-yellow);
+    color: #000;
+    padding: 0.5rem 1rem;
+    z-index: 1000;
+    font-family: "Press Start 2P", monospace;
+    font-size: 0.7rem;
+}
+
+.skip-link:focus { top: 0; }
+
+.content {
+    max-width: 44rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+a, a:visited { color: var(--link); }
+a:visited { color: var(--link-visited); }
+a:hover { color: var(--neon-pink); }
+
+/* ---------- marquee ---------- */
+
+.marquee {
+    background: #000;
+    color: var(--neon-green);
+    font-family: "Press Start 2P", monospace;
+    font-size: 0.7rem;
+    overflow: hidden;
+    white-space: nowrap;
+    border-bottom: 2px solid var(--neon-green);
+    padding: 0.5rem 0;
+}
+
+.marquee__track {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 26s linear infinite;
+}
+
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .marquee { overflow-x: auto; }
+    .marquee__track { animation: none; padding-left: 0; }
+}
+
+/* ---------- header / nav ---------- */
+
+.site-header {
+    padding: 1.5rem 1rem 1rem;
+    max-width: 44rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+.brand {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Press Start 2P", monospace;
+    color: var(--neon-yellow);
+    font-size: 1.5rem;
+    text-shadow: 3px 3px 0 var(--neon-pink), 6px 6px 0 rgba(0,0,0,0.5);
+    margin-bottom: 0.35rem;
+    letter-spacing: 1px;
+}
+
+.brand:hover, .brand:visited { color: var(--neon-yellow); }
+
+.tagline {
+    text-align: center;
+    color: var(--neon-cyan);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.nav-buttons {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-btn {
+    display: inline-block;
+    font-family: "Press Start 2P", monospace;
+    font-size: 0.62rem;
+    text-decoration: none !important;
+    color: var(--ink);
+    background: var(--paper);
+    padding: 0.6rem 0.7rem;
+    border: 3px solid var(--border-dark);
+    box-shadow: 3px 3px 0 var(--border-dark), inset -2px -2px 0 rgba(0,0,0,0.25), inset 2px 2px 0 rgba(255,255,255,0.6);
+}
+
+.nav-btn:hover {
+    background: var(--neon-yellow);
+    transform: translate(1px, 1px);
+    box-shadow: 2px 2px 0 var(--border-dark), inset -2px -2px 0 rgba(0,0,0,0.25), inset 2px 2px 0 rgba(255,255,255,0.6);
+}
+
+li.active .nav-btn {
+    background: var(--neon-cyan);
+}
+
+.burger {
+    display: none;
+    background: var(--paper);
+    border: 3px solid var(--border-dark);
+    box-shadow: 3px 3px 0 var(--border-dark);
+    padding: 0.6rem 0.8rem;
+    cursor: pointer;
+    margin: 0 auto 1rem;
+}
+
+.burger span {
+    display: block;
+    width: 22px;
+    height: 3px;
+    background: #000;
+    margin: 4px 0;
+}
+
+@media (max-width: 640px) {
+    .burger { display: block; }
+
+    .nav-menu {
+        position: fixed;
+        inset: 0;
+        background: var(--void-1);
+        padding: 5rem 2rem 2rem;
+        transform: translateY(-100%);
+        transition: transform 0.25s ease;
+        z-index: 50;
+        overflow-y: auto;
+    }
+
+    .nav-menu.active { transform: translateY(0); }
+
+    .nav-buttons { flex-direction: column; align-items: stretch; }
+    .nav-buttons li { width: 100%; }
+    .nav-btn { text-align: center; display: block; }
+}
+
+/* ---------- retro window / panel ---------- */
+
+.window {
+    background: var(--paper);
+    border: 3px solid var(--border-dark);
+    box-shadow: 6px 6px 0 rgba(0,0,0,0.55);
+    margin-bottom: 1.75rem;
+}
+
+.window__titlebar {
+    background: repeating-linear-gradient(90deg, var(--link-visited), var(--link-visited) 2px, #8b1fc9 2px, #8b1fc9 4px);
+    color: #fff;
+    font-family: "Press Start 2P", monospace;
+    font-size: 0.65rem;
+    padding: 0.5rem 0.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--border-dark);
+}
+
+.window__dots { display: flex; gap: 0.3rem; }
+.window__dots span {
+    width: 12px;
+    height: 12px;
+    border: 2px solid #000;
+    background: var(--paper);
+    display: inline-block;
+}
+
+.window__body {
+    padding: 1.25rem 1.5rem;
+}
+
+.window__body :first-child { margin-top: 0; }
+
+.window__body p, .window__body ul, .window__body ol {
+    margin: 0 0 1rem;
+}
+
+.window__body img {
+    max-width: 100%;
+    height: auto;
+    border: 4px solid #000;
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.35);
+    background: #fff;
+    padding: 4px;
+}
+
+.window__body blockquote {
+    border-left: 5px solid var(--neon-pink);
+    padding-left: 1rem;
+    margin: 1rem 0;
+    color: var(--ink-soft);
+    font-style: italic;
+}
+
+.window__body pre {
+    padding: .75rem;
+    overflow: auto;
+    border: 2px dashed #000;
+}
+
+.window__body code, .window__body pre {
+    font-family: "Courier New", monospace;
+    background: #eee;
+}
+
+.window__body code {
+    margin: .1rem;
+    border: none;
+    padding: 0 .25rem;
+}
+
+.window__body ul { list-style-type: none; }
+.window__body ul li::before {
+    content: "\2605  ";
+    color: var(--link);
+}
+
+.window__body ul.tag-pixel-list li::before,
+.window__body ul.post-list li::before {
+    content: none;
+}
+
+.window__body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+.window__body th, .window__body td {
+    border: 2px solid #000;
+    text-align: left;
+    padding: .5rem;
+}
+
+.window__body th {
+    background: var(--neon-cyan);
+    font-family: "Press Start 2P", monospace;
+    font-size: 0.6rem;
+}
+
+/* ---------- homepage desktop icons ---------- */
+
+.desktop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.25rem;
+    padding: 0.5rem 0 1.5rem;
+    list-style: none;
+    margin: 0;
+}
+
+.desktop-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none !important;
+    color: var(--neon-yellow);
+    text-align: center;
+    gap: 0.5rem;
+}
+
+.desktop-icon__glyph {
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.1rem;
+    background: var(--paper);
+    border: 3px solid var(--border-dark);
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.55);
+}
+
+.desktop-icon:hover .desktop-icon__glyph {
+    background: var(--neon-cyan);
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 rgba(0,0,0,0.55);
+}
+
+.desktop-icon__label {
+    font-family: "Press Start 2P", monospace;
+    font-size: 0.6rem;
+    text-shadow: 2px 2px 0 #000;
+}
+
+/* ---------- under construction ---------- */
+
+.under-construction {
+    font-family: "Press Start 2P", monospace;
+    font-size: 0.62rem;
+    color: #000;
+    text-align: center;
+    padding: 0.75rem 0.5rem;
+    background: repeating-linear-gradient(45deg, var(--neon-yellow), var(--neon-yellow) 14px, #000 14px, #000 28px);
+    border: 3px solid #000;
+    margin-bottom: 1.75rem;
+    letter-spacing: 1px;
+}
+
+.under-construction span {
+    background: var(--paper);
+    padding: 0.35rem 0.75rem;
+    display: inline-block;
+    border: 2px solid #000;
+}
+
+/* ---------- tags ---------- */
+
+.tag-pixel-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    padding: 0;
+    margin: 0.5rem 0 0;
+}
+
+.tag-pixel {
+    font-family: "Press Start 2P", monospace;
+    font-size: 0.55rem;
+    text-decoration: none !important;
+    background: var(--neon-pink);
+    color: #fff;
+    padding: 0.3rem 0.5rem;
+    border: 2px solid #000;
+    box-shadow: 2px 2px 0 #000;
+}
+
+.tag-pixel:visited { color: #fff; }
+
+/* ---------- post meta ---------- */
+
+.post-date {
+    font-size: 1.1rem;
+    color: var(--ink-soft);
+    margin: 0.25rem 0 1rem;
+    border-top: 1px dashed #000;
+    border-bottom: 1px dashed #000;
+    padding: 0.4rem 0;
+}
+
+/* ---------- post list (blog index) ---------- */
+
+.post-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.post-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.6rem 0;
+    border-bottom: 1px dashed #000;
+}
+
+.post-list a {
+    text-decoration: none;
+    flex: 1;
+}
+
+.post-list a:hover { text-decoration: underline; }
+
+.post-list time {
+    font-size: 1.1rem;
+    color: var(--ink-soft);
+    white-space: nowrap;
+}
+
+/* ---------- visitor counter ---------- */
+
+.visitor-counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    font-family: "Press Start 2P", monospace;
+    font-size: 0.6rem;
+    color: var(--neon-green);
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.counter-digits {
+    background: #000;
+    border: 3px solid var(--neon-green);
+    padding: 0.5rem 0.6rem;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+}
+
+.visitor-counter small {
+    display: block;
+    color: var(--neon-cyan);
+    font-family: "VT323", monospace;
+    font-size: 0.9rem;
+    margin-top: 0.35rem;
+    letter-spacing: 0;
+}
+
+/* ---------- webring / badge row ---------- */
+
+.badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    list-style: none;
+    padding: 0;
+    margin: 1.25rem 0;
+}
+
+.badge-88 {
+    width: 88px;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Press Start 2P", monospace;
+    font-size: 0.42rem;
+    line-height: 1.2;
+    text-decoration: none !important;
+    color: #fff;
+    border: 2px solid #000;
+    padding: 2px;
+}
+
+.badge-88:visited { color: #fff; }
+.badge-88--about  { background: linear-gradient(180deg, #ff6ec7, #d6006e); }
+.badge-88--blog   { background: linear-gradient(180deg, #22e2f5, #0f8ba8); }
+.badge-88--insta  { background: linear-gradient(180deg, #feda75, #d62976 60%, #4f5bd5); }
+.badge-88--li     { background: linear-gradient(180deg, #4da3ff, #0a66c2); }
+.badge-88--gs     { background: linear-gradient(180deg, #7d8cff, #4285f4); }
+.badge-88--guest  { background: linear-gradient(180deg, #39ff8f, #128a45); }
+
+/* ---------- footer ---------- */
+
+.site-footer {
+    max-width: 44rem;
+    margin: 1.5rem auto 0;
+    padding: 1.5rem 1rem 0;
+    text-align: center;
+    color: var(--neon-cyan);
+    font-size: 1.05rem;
+}
+
+.best-viewed {
+    font-family: "Press Start 2P", monospace;
+    font-size: 0.55rem;
+    color: #000;
+    background: var(--paper);
+    border: 2px solid #000;
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    margin-top: 0.75rem;
+}
+
+/* ---------- misc ---------- */
+
+.animate-blink {
+    animation: opacity 1s infinite;
+}
+
+@keyframes opacity {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+}
+
+::-webkit-scrollbar { width: 14px; }
+::-webkit-scrollbar-track { background: var(--void-2); }
+::-webkit-scrollbar-thumb {
+    background: var(--neon-pink);
+    border: 3px solid var(--void-2);
+}
+
+.avatar {
+    height: 120px;
+    width: 120px;
+    border-radius: 0;
+}
