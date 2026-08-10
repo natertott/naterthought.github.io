@@ -23,12 +23,8 @@ about culture, politics, science.
 
 <ul class="paper-list">
   <li>
-    <a href="/papers/VGPT.pdf" target="_blank" rel="noopener">What happens when you let LLM agents drive the microscope — a review of multi-agent frameworks for running lab instruments</a>
-    <span class="paper-desc">Multi-Agent Systems for Autonomous Laboratory Instrument Operation, 2025</span>
-  </li>
-  <li>
-    <a href="/papers/GRC2026.pdf" target="_blank" rel="noopener">Why X-ray microscopy is one of the last holdouts of lab automation, and what it takes to close the loop</a>
-    <span class="paper-desc">Gordon Research Conference: AI for Materials, Energy, and Chemical Sciences, 2026</span>
+    <a href="/papers/SDLBenchmarks.pdf" target="_blank" rel="noopener">Everything important I learned in three years of building self-driving microscopes</a>
+    <span class="paper-desc">Agentic self-driving microscopy benchmarks support qualification but do not necessarily generalize to unseen tasks, 2026</span>
   </li>
 </ul>
 
@@ -50,6 +46,7 @@ about culture, politics, science.
 <ul class="paper-list">
   <li>
     <a href="/papers/NISTinsitu.pdf" target="_blank" rel="noopener">Speeding up in situ X-ray tomography experiments using deep learning</a>
+    <span class="paper-desc">Materials Characterization, 2026</span>
   </li>
   <li>
     <a href="/papers/trusses.pdf" target="_blank" rel="noopener">A custom experiment for measuring strain in complex 3D printed metal parts</a>
