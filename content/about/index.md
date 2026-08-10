@@ -23,7 +23,7 @@ about culture, politics, science.
 
 <ul class="paper-list">
   <li>
-    <a href="/papers/SDLBenchmarks.pdf" target="_blank" rel="noopener">Everything important I learned in three years of building self-driving microscopes</a>
+    <a href="/papers/SDLBenchmarks.pdf" target="_blank" rel="noopener">Everything important that I learned in three years of building self-driving microscopes</a>
     <span class="paper-desc">Agentic self-driving microscopy benchmarks support qualification but do not necessarily generalize to unseen tasks, 2026</span>
   </li>
 </ul>
