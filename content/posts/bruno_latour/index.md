@@ -1,7 +1,7 @@
 +++
 date = '2026-05-16T14:42:43-07:00'
 draft = false
-title = 'Cole Haan Shoe Review: How much to contemplate death?'
+title = 'Critical Review: The Cole Haan Hybrid Dress Shoe'
 tags = ['opinion','aesthetics']
 +++
 
