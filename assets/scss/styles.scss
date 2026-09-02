@@ -349,3 +349,133 @@ hr {
     padding: 0.35rem 0.5rem;
     letter-spacing: 3px;
 }
+
+/* ---------- portfolio page ---------- */
+
+.content--wide {
+    max-width: 54rem;
+}
+
+.portfolio-hero {
+    text-align: center;
+    padding: 1rem 0 0.5rem;
+}
+
+.portfolio-hero h1 {
+    font-size: 1.15rem;
+    margin: 0 0 0.75rem;
+    line-height: 1.7;
+}
+
+.portfolio-hero__sub {
+    color: var(--faint);
+    font-size: 1.15rem;
+    margin: 0 0 1.5rem;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin: 0 0 1.5rem;
+}
+
+.photo-gallery figure {
+    margin: 0;
+}
+
+.photo-gallery img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.photo-gallery figcaption {
+    color: var(--faint);
+    font-size: 1.05rem;
+    margin-top: 0.5rem;
+    line-height: 1.4;
+}
+
+.timeline {
+    border-left: 2px dashed var(--sage);
+    margin: 0 0 1.5rem 0.4rem;
+    padding: 0 0 0 1.25rem;
+}
+
+.timeline__item {
+    position: relative;
+    padding-bottom: 1.4rem;
+}
+
+.timeline__item::before {
+    content: "";
+    position: absolute;
+    left: -1.55rem;
+    top: 0.4rem;
+    width: 10px;
+    height: 10px;
+    background: var(--moss);
+    border: 2px solid var(--paper);
+}
+
+.timeline__item:last-child { padding-bottom: 0; }
+
+.timeline__when {
+    font-family: "Press Start 2P", monospace;
+    font-size: 0.6rem;
+    color: var(--moss);
+    margin-bottom: 0.35rem;
+}
+
+.timeline__what p {
+    color: var(--faint);
+    margin: 0.15rem 0 0;
+}
+
+.skill-chips {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0 0 1.5rem;
+}
+
+.skill-chips li {
+    font-size: 1.05rem;
+    color: var(--bark);
+    background: var(--panel);
+    border: 1px solid var(--sage);
+    padding: 0.15rem 0.6rem;
+}
+
+.cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1rem 0 2rem;
+}
+
+.cta-btn {
+    display: inline-block;
+    text-decoration: none !important;
+    font-family: "Press Start 2P", monospace;
+    font-size: 0.65rem;
+    color: var(--paper);
+    background: var(--moss);
+    border: 2px solid var(--moss);
+    padding: 0.7rem 1rem;
+}
+
+.cta-btn:visited { color: var(--paper); }
+.cta-btn:hover { background: var(--bark); border-color: var(--bark); }
+
+.cta-btn--ghost {
+    color: var(--moss);
+    background: transparent;
+}
+
+.cta-btn--ghost:visited { color: var(--moss); }
+.cta-btn--ghost:hover { color: var(--paper); background: var(--bark); border-color: var(--bark); }

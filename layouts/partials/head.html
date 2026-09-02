@@ -4,6 +4,7 @@
     <meta name="author" content="{{ .Site.Params.author }}">
     <title>{{ if eq .IsHome true }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
     <meta name="description" content="{{ if ne .Description "" }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    {{ with .Params.robots }}<meta name="robots" content="{{ . }}">{{ end }}
     {{ template "_internal/opengraph.html" . }}
     {{ template "_internal/schema.html" . }}
     <link rel="canonical" href="{{ .Permalink }}">
