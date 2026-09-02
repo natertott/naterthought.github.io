@@ -14,15 +14,15 @@ description = "Research portfolio: agentic AI for scientific instrumentation, au
 [params]
   robots = "noindex, nofollow"
 +++
+I've spent my career at the intersection of materials experimentation
+and the algorithms that drive those experiments. This page is the technical,
+work-focused version of me: what I've built, what I've run, and what I've 
+learned about the gap between a model that can reason and a model that can 
+safely turn a knob.
 
-I build AI agents that drive scientific instruments — the kind with beam
-currents, vacuum interlocks, and a five-figure repair bill if you get it
-wrong. This page is the technical, work-focused version of me: what I've
-built, what I've run, and what I've learned about the gap between a model
-that can reason and a model that can safely turn a knob.
-
-If you want the essays about shoes and death, that's [the other
-page](/about/).
+Lately I've been building AI agents that drive scientific instruments — 
+the kind with beam currents, vacuum interlocks, and a five-figure repair 
+bill if you get it wrong. 
 
 ## What I actually do
 
@@ -41,14 +41,13 @@ just memorize the demo?
 
 ### Materials theory meets active experimentation
 
-Before the microscopes talked back, I was on the other side of the
+Before building autonomous microscopes, I was on the other side of the
 closed loop: using Bayesian experimental design and active-learning models
 to decide what to synthesize next, and pairing DFT with high-throughput
 synchrotron beamlines to make combinatorial materials discovery something
 you could actually finish in a PhD. At Stanford/SLAC I ran a high-throughput
 synthesis lab producing thin-film and bulk compositionally complex alloys,
-integrating theory, synthesis, and characterization into one feedback loop
-instead of three separate papers.
+integrating theory, synthesis, and characterization into one feedback loop.
 
 ### Breadth across synthesis and characterization
 
@@ -65,15 +64,15 @@ you've never had to fix yourself.
 
 <div class="photo-gallery">
   <figure>
-    <img src="/img/portfolio/agentic-framework-talk.jpg" alt="Nathan presenting a slide titled 'Building the Agentic Framework' showing the architecture connecting an LLM agent to a Zeiss Versa X-ray microscope via Python tools and a knowledge database, in front of a seated conference audience.">
+    <img src="/img/portfolio/agentic-framework-talk.jpg" alt="Presenting my research at MRS Spring 2026.">
     <figcaption>Presenting the agentic framework behind our self-driving Zeiss Versa X-ray microscope — planning, tool use, and a knowledge database wired straight into the instrument.</figcaption>
   </figure>
   <figure>
-    <img src="/img/portfolio/ssrl-beamline.jpg" alt="Nathan gesturing toward a custom X-ray diffraction end-station inside SSRL beamline BL 10-2, with a radiation warning sign visible.">
+    <img src="/img/portfolio/ssrl-beamline.jpg" alt="Standing awkwardly next to the first beamline instrument I designed and implemented.">
     <figcaption>Beamline BL 10-2 at SSRL — one of the custom synchrotron end-stations I helped build and run for combinatorial alloy characterization.</figcaption>
   </figure>
   <figure>
-    <img src="/img/portfolio/synthesis-lab.jpg" alt="Nathan holding a sample flange up to the camera in front of a combinatorial sputtering glovebox system.">
+    <img src="/img/portfolio/synthesis-lab.png" alt="Working in the high entropy alloy design and discovery lab.">
     <figcaption>Pulling a sample flange in the combinatorial synthesis lab — high-throughput sputtering, before the alloy ever sees a beamline.</figcaption>
   </figure>
 </div>
@@ -129,6 +128,12 @@ you've never had to fix yourself.
 
 <ul class="skill-chips">
   <li>LLM agents</li>
+  <li>Instrument APIs &amp; closed-loop control</li>
+  <li>Combinatorial sputtering / PVD</li>
+  <li>Additive manufacturing</li>
+  <li>X-ray diffraction &amp; tomography</li>
+  <li>SEM &amp; EBSD</li>
+  <li><em>In situ</em> characterization</li>
   <li>Multi-agent systems</li>
   <li>Planning &amp; tool use</li>
   <li>Structured function calling</li>
@@ -141,13 +146,6 @@ you've never had to fix yourself.
   <li>Active learning</li>
   <li>Computer vision</li>
   <li>Deep-learning image segmentation</li>
-  <li>Instrument APIs &amp; closed-loop control</li>
-  <li>High-throughput synthesis</li>
-  <li>Combinatorial sputtering / PVD</li>
-  <li>Additive manufacturing</li>
-  <li>X-ray diffraction &amp; tomography</li>
-  <li>SEM &amp; EBSD</li>
-  <li><em>In situ</em> characterization</li>
 </ul>
 
 ## Selected publications
