@@ -74,7 +74,7 @@ you've never had to fix yourself.
   </figure>
   <figure>
     <img src="/img/portfolio/synthesis-lab.png" alt="Working in the high entropy alloy design and discovery lab.">
-    <figcaption>Pulling a thin film high entropy alloy samples out of the sputtering rig. This alloy is made up of 6 different elements!</figcaption>
+    <figcaption>Pulling a thin film high entropy alloy sample out of the magnetron sputtering rig. This alloy is made up of 6 different elements!</figcaption>
   </figure>
 </div>
 
