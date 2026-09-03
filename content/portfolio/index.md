@@ -65,15 +65,16 @@ you've never had to fix yourself.
 <div class="photo-gallery">
   <figure>
     <img src="/img/portfolio/agentic-framework-talk.jpg" alt="Presenting my research at MRS Spring 2026.">
-    <figcaption>Presenting the agentic framework behind our self-driving Zeiss Versa X-ray microscope — planning, tool use, and a knowledge database wired straight into the instrument.</figcaption>
+    <figcaption>Presenting my self-driving X-ray Microscopy agent at MRS Spring 2026 in Honolulu, Hawai'i.</figcaption>
   </figure>
   <figure>
     <img src="/img/portfolio/ssrl-beamline.jpg" alt="Standing awkwardly next to the first beamline instrument I designed and implemented.">
-    <figcaption>Beamline BL 10-2 at SSRL — one of the custom synchrotron end-stations I helped build and run for combinatorial alloy characterization.</figcaption>
+    <figcaption>Awkwardly standing in from of Beamline 10-2 at the Stanford Synchrotron Radiation Lightsource. I designed and built this instrument for high-throughput
+    materials discovery.</figcaption>
   </figure>
   <figure>
     <img src="/img/portfolio/synthesis-lab.png" alt="Working in the high entropy alloy design and discovery lab.">
-    <figcaption>Pulling a sample flange in the combinatorial synthesis lab — high-throughput sputtering, before the alloy ever sees a beamline.</figcaption>
+    <figcaption>Pulling a thin film high entropy alloy samples out of the sputtering rig. This alloy is made up of 6 different elements!</figcaption>
   </figure>
 </div>
 
