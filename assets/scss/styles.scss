@@ -4,45 +4,27 @@
             sage #8F9F8D · clay #C9A891
 
    type:
-     - wordmark/logo + titles/headings: Fraunces
-     - subtitles:                       Fraunces italic
-     - main text (essays):              Literata — built for long-form reading
-     - captions/UI/nav:                 Inter
+     - titles/headings + subtitles (italic) + main text: Lora
+     - captions/UI/nav:                                  Inter
    =================================================================== */
 
 /* self-hosted fonts (latin subsets, downloaded from Google Fonts).
-   Fraunces, Literata, and Inter ship as variable fonts (wght axis), so
-   one file each covers both their regular and bold/semibold weights. */
+   Lora and Inter ship as variable fonts (wght axis), so one file each
+   covers both their regular and bold/semibold weights. */
 @font-face {
-    font-family: "Fraunces";
+    font-family: "Lora";
     font-style: normal;
-    font-weight: 100 900;
+    font-weight: 400 700;
     font-display: swap;
-    src: url("/fonts/fraunces-latin.woff2") format("woff2");
+    src: url("/fonts/lora-latin.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: "Fraunces";
+    font-family: "Lora";
     font-style: italic;
     font-weight: 400;
     font-display: swap;
-    src: url("/fonts/fraunces-italic-latin.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Literata";
-    font-style: normal;
-    font-weight: 400 900;
-    font-display: swap;
-    src: url("/fonts/literata-latin.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Literata";
-    font-style: italic;
-    font-weight: 400;
-    font-display: swap;
-    src: url("/fonts/literata-italic-latin.woff2") format("woff2");
+    src: url("/fonts/lora-italic-latin.woff2") format("woff2");
 }
 
 @font-face {
@@ -63,8 +45,8 @@
     --panel: #E5DDD0;
     --faint: #6F6E78;
 
-    --font-title: "Fraunces", Georgia, serif;
-    --font-body: "Literata", Georgia, serif;
+    --font-title: "Lora", Georgia, serif;
+    --font-body: "Lora", Georgia, serif;
     --font-ui: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
