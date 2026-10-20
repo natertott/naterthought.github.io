@@ -4,11 +4,10 @@
             sage #8F9F8D · clay #C9A891
 
    type:
-     - wordmark/logo only: UnifrakturMaguntia (blackletter accent)
-     - titles/headings:     Fraunces
-     - subtitles:           Fraunces italic
-     - main text (essays):  Literata — built for long-form reading
-     - captions/UI/nav:     Inter
+     - wordmark/logo + titles/headings: Fraunces
+     - subtitles:                       Fraunces italic
+     - main text (essays):              Literata — built for long-form reading
+     - captions/UI/nav:                 Inter
    =================================================================== */
 
 /* self-hosted fonts (latin subsets, downloaded from Google Fonts).
@@ -54,14 +53,6 @@
     src: url("/fonts/inter-latin.woff2") format("woff2");
 }
 
-@font-face {
-    font-family: "UnifrakturMaguntia";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url("/fonts/unifraktur-maguntia-latin.woff2") format("woff2");
-}
-
 :root {
     --moss: #2E4A2B;
     --bark: #4A372B;
@@ -75,7 +66,6 @@
     --font-title: "Fraunces", Georgia, serif;
     --font-body: "Literata", Georgia, serif;
     --font-ui: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    --font-wordmark: "UnifrakturMaguntia", var(--font-title);
 }
 
 *, :after, :before {
@@ -157,8 +147,9 @@ a:hover { color: var(--bark); }
 }
 
 .brand {
-    font-family: var(--font-wordmark);
-    font-size: 1.9rem;
+    font-family: var(--font-title);
+    font-weight: 600;
+    font-size: 1.75rem;
     line-height: 1;
     color: var(--moss);
     text-decoration: none;
