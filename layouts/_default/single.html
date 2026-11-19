@@ -8,6 +8,12 @@
 
   <main id="main">
     <div class="content">
+      {{ with .Params.banner }}
+      {{ with $.Resources.GetMatch . }}
+      <img class="post-banner" src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $.Params.bannerAlt | default "" }}">
+      {{ end }}
+      {{ end }}
+
       <h1>{{ .Title }}</h1>
 
       {{ if eq .Section "posts" }}

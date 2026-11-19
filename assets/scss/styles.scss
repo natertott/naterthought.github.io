@@ -207,6 +207,12 @@ main img {
     background: var(--paper);
 }
 
+main img.post-banner {
+    display: block;
+    width: 100%;
+    margin: 0 0 1.5rem;
+}
+
 blockquote {
     font-style: italic;
     border-left: 4px solid var(--sage);
